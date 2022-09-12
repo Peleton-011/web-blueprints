@@ -1,0 +1,33 @@
+
+/*
+The default browser font tends to not be very pleasing, so we use system fonts instead.
+There are a couple of ways of getting a nice system font stack implemented.
+*/
+
+/* 
+This one is at the element level, affecting only the "element" class.
+*/
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+  
+.element {
+    font-family: var(--system-ui);
+}
+
+/*
+This one is using a proper stack using @font-face
+*/
+
+/* Define the "system" font family */
+@font-face {
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+  
+/* Now, let's apply it on an element */
+body {
+    font-family: "system-ui";
+}
