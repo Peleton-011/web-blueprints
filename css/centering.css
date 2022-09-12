@@ -1,0 +1,20 @@
+/* 
+These are some short, modern ways to center elements in CSS
+*/
+
+/* 
+Using CSS grid
+*/
+.centering {
+    display: grid;
+    place-content: center;
+}
+
+/* 
+Using flexbox
+*/
+.flex-centering {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
