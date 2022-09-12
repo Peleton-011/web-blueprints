@@ -1,0 +1,31 @@
+/* 
+Properly done, responsive grids are very satisfying to use, that's why it's very important to get them right.
+*/
+
+/* 
+Using CSS grid
+*/
+.css-grid {
+    --gap: 1rem;
+    --min: 15ch;
+
+    grid-gap: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+}
+
+/* 
+Using flexbox
+*/
+.flexbox-grid {
+    --gap: 1rem;
+    --min: 10ch;
+
+    gap: var(--gap);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexbox-grid > * {
+    flex: 1 1 var(--min);
+}
