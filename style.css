@@ -1,0 +1,8 @@
+.media {
+    display: flex;
+    align-items: flex-start;
+}
+.media .content {
+    flex: 1;
+    padding: 10px;
+}
